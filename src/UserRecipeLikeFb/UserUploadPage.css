@@ -1,0 +1,190 @@
+/* Each recipe card takes half of the container minus gap (2 per row) */
+.recipe-card {
+  flex: 0 0 calc(50% - 20px); /* 2 per row */
+  max-width: 500px; /* optional max width */
+  margin-bottom: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+.giveheight {
+  height: 100vh;
+}
+/* Make it responsive: 1 per row on mobile */
+
+/* Image Container */
+.recipe-card-img-box {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+
+.recipeCardImg {
+  width: 100%;
+  height: 100%;
+}
+
+.recipeCardImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 🔥 Ensures image fills box without distortion */
+}
+
+/* Action Buttons Overlay */
+.recipe-actions {
+  position: absolute;
+  bottom: 10px;
+  border-radius: 20px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 0;
+}
+
+.recipe-actions button {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px;
+  transition: color 0.2s ease;
+}
+.sweet-loading.loader-overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recipe-actions button:hover {
+  color: #1d4ed8;
+}
+
+/* Recipe Text Content */
+.recipe-card-content {
+  padding: 15px;
+}
+.userIdentityBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recipe-source {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #6c63ff;
+  font-weight: bold;
+}
+
+.recipe-title {
+  margin: 5px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+.recipe-desc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.user-recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center the row */
+  gap: 20px; /* space between cards */
+  padding: 30px;
+}
+.ingredients-section {
+  margin-top: 10px;
+}
+
+.ingredients-section h4 {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Ingredient List (bullets or tags style) */
+.ingredient-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ingredient-item {
+  background-color: #f3f4f6;
+  color: #111827;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.no-recipe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  height: 60vh;
+  text-align: center;
+}
+
+.no-recipe-image {
+  width: 150px;
+  height: auto;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.no-recipe-text {
+  color: #666;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.commentContainerUser {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  overflow-y: auto;
+  background: #fff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .recipe-card {
+    flex: 0 0 100%;
+  }
+  .recipe-actions {
+    position: absolute;
+    bottom: 10px;
+    border-radius: 20px;
+    width: 54vw;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 0;
+  }
+}

@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Patrick+Hand&display=swap');
+
+
+.foodMainContainerHero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 87vh;
+}
+.imageHeroOuterCircle {
+  background-color: #ffffff;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 19px 28px rgba(0, 0, 0, 0.2);
+}
+.recipeText {
+    font-family: "Patrick Hand", cursive;
+    font-size: 20px;
+    padding: 0px 25px;
+}
+.imageHero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageHero img {
+  width: 82%;
+  border-radius: 52%;
+  box-shadow: 0 19px 28px rgba(0, 0, 0, 0.2);
+}
+
+.boxSection img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+ box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.textSection {
+  position: absolute;
+  left: 0;
+  position: absolute;
+  left: 0;
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poiret One", sans-serif;
+}
+
+.boxSection {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+}
+.recipeBox1 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 15px 0px;
+  border-radius: 70px 0px 0px 70px;
+  padding: 10px;
+  width: 35vw;
+  background-color: orange;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.recipeBox2 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 15px 0px;
+  border-radius: 70px 0px 0px 70px;
+  padding: 10px;
+  width: 33vw;
+  background-color: #fbfbfb;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.recipeBox3 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 15px 0px;
+  border-radius: 70px 0px 0px 70px;
+  padding: 10px;
+  width: 32vw;
+  background-color: #fbfbfb;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.foodMainContainerHero h1 {
+  font-size: 6rem;
+}
+.searchIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 25%;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.searchIconSvg {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+input.searchIconInput {
+  padding: 7px;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  transition: width 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+.searchActive {
+  width: 100%;
+}
+.searchHide {
+  width: 0%;
+  background-color: #f3f4f6;
+}
+
+.searchFrom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.foodMainContainer {
+  width: 100vw;
+  position: relative;
+}
+
+/* Blurs everything behind */
+.loadingBlur {
+  filter: blur(4px);
+  pointer-events: none;
+}
+.searchFoodByMainpage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Stays on top */
+.loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.6); /* Light blur effect */
+  z-index: 9999;
+}
+.newrecipe-vertical {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left top;
+  background-color: #4f46e5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 0 8px 8px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+@media (max-width: 986px) {
+  .imageHeroOuterCircle {
+    height: 400px;
+    width: 400px;
+  }
+  .imageHero img {
+    width: 62%;
+  }
+  .foodMainContainerHero h1 {
+    font-size: 5.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .textSection {
+    left: 50px;
+  }
+  .recipeText p {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 568px) {
+  .foodMainContainerHero {
+    flex-direction: column;
+  }
+  .textSection {
+    position: static;
+  }
+  .boxSection {
+    position: static;
+    width: 100%;
+  }
+  .foodMainContainerHero {
+    height: 100vh;
+  }
+  .foodMainContainerHero h1 {
+    font-size: 2.5rem;
+  }
+  .foodMainContainerHero {
+    justify-content: start;
+    height: auto;
+  }
+  .recipeBox1 {
+    width: 80vw;
+    padding: 4px;
+  }
+  .recipeBox2 {
+    width: 80vw;
+    padding: 4px;
+  }
+  .recipeBox3 {
+    width: 80vw;
+    padding: 4px;
+  }
+  .imageHeroOuterCircle {
+    height: 300px;
+    width: 300px;
+  }
+  .textSection p {
+    font-size: 0.8rem;
+  }
+}

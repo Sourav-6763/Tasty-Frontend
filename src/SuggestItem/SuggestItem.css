@@ -1,0 +1,114 @@
+.CategorySlide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CategoryName {
+  background-color: transparent; /* Remove the background */
+  color: black; /* Change text color for better visibility */
+  text-align: center;
+  margin-top: 5px; /* Adds spacing between image and text */
+  font-size: 16px;
+  font-weight: bold;
+  height: 90px;
+}
+
+.productContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.mySwiperBySuggestedItem {
+  width:100%;
+  overflow: hidden; 
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 200px;
+  height: 250px;
+  object-fit: contain;
+}
+
+.categoryContainerInner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 90vw;
+  position: relative;
+}
+.categoryContainer {
+  position: relative;
+}
+
+.suggestItemText{
+  margin-bottom: 10px;
+}
+
+.leftArrow,
+.rightArrow {
+  font-size: 30px;
+  position: absolute;
+  top: 50%; /* Vertically center the arrows */
+  transform: translateY(
+    -50%
+  ); /* Adjust to ensure they are perfectly centered */
+  z-index: 10;
+  cursor: pointer;
+}
+
+.leftArrow {
+  left: 10px; /* Left side of the container */
+}
+
+.rightArrow {
+  right: 10px; /* Right side of the container */
+}
+
+.CategorySlide {
+  margin-right: 0px;
+}
+
+@media (max-width: 518px) {
+  .CategoryName {
+    font-size: 0.6rem;
+  }
+  .itemImageContainer img {
+    width: 100%;
+  }
+  .containerRight {
+    padding: 0px;
+  }
+  .ingredientContainer {
+    padding: 0px;
+  }
+  .ingredientImage {
+    width: 125px;
+    height: 200px;
+}
+
+
+}
+@media (max-width: 671px) {
+  .swiper-slide img {
+    width: 179px;
+  }
+}
+@media (max-width: 890px) {
+  .swiper-slide img {
+    width: 170px;
+  }
+}
+

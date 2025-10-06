@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .mainItemContainer {
+    padding: 2rem;
+    background-color: #fdfdfd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .onePageItemContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+  
+  .containerLeft {
+    min-width: 300px;
+  }
+  
+  .containerRight {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 1rem;
+  }
+  .dishType {
+    display: flex;
+    flex-wrap: wrap;
+}
+  .itemImageContainer img {
+    width: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .iconContainerItem {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+  
+  .iconItem {
+    text-align: center;
+    color: #333;
+  }
+  
+  .iconItem p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+  }
+  .processbox p{
+    text-align: justify;
+  }
+  .iconItem svg {
+    font-size: 30px;
+    color: #1d4ed8;
+  }
+  
+  .containerRight h4 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  .css-17yvowu-MuiChartsSurface-root {
+    height: 100% !important;
+    width: 100% !important;
+  }
+  /* Steps styling */
+  .processForMade {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 6px 14px;
+  }
+  
+  .processForMadeInside {
+    background-color: #fffcfc;
+    padding: 1rem;
+    border-left: 30px solid #3A59D1;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
+    color: black;
+  }
+  .ingredientContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .ingredientImage {
+  border: 2px solid #ccc;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 12px;
+    background-color: #fff;
+    width: 151px;
+    height: 225px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .ingredientImage:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ingredientImage img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 8px;
+  }
+  
+  .ingredientImage p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+  }
+  .itemImageContainer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+.caloriesButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  background-color: #e6f4ea; /* soft green background */
+  color: #2e7d32;            /* dark green text */
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-left: 10px;
+  cursor: default;
+  transition: background-color 0.3s;
+}
+
+.caloriesButton:hover {
+  background-color: #d0e7da;
+}
+
+.caloriesButton svg {
+  font-size: 1rem;
+}
+.chartContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.dishType {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin:10px 0px;
+}
+
+.dish-button {
+  background-color: #6e8be4;
+    border: none;
+    padding: 6px 14px;
+    color: white;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+.css-1lseaq2-MuiChartsWrapper-root {
+  flex-wrap: wrap;
+}
+/* .dish-button:hover {
+  background-color: #e0e0e0;
+} */
+@media (max-width:768px) {
+  .containerLeft {
+    min-width: 100%;
+}
+}
+@media (max-width:476px) {
+  .containerRight h4 {
+    font-size: 1.4rem;
+}
+
+}
+@media (max-width:376px) {
+  .processbox p{
+    font-size: 1rem;
+  }
+}

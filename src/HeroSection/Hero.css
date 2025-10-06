@@ -1,0 +1,143 @@
+.hero-container {
+    display: flex;
+    align-items: center;
+    margin: 50px auto;
+    height: auto;
+    width: 90vw;
+    background-color: #f3f4f6;
+  }
+  
+
+  
+  .text-content {
+    flex: 1;
+  }
+  .text-content  span{
+    position: relative;
+  }
+  .text-content  span::before{
+    content: "Love";
+    color: #1d4ed8;
+    animation: words 20s infinite;
+  }
+  .text-content  span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #f3f4f6;
+    border-left: 2px solid beige;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+  }
+  @keyframes cursor{
+    to{
+        border-left: 2px solid blue;
+    }
+  }
+  @keyframes words {
+    0%, 20% {
+        content: "Learn";
+    }
+    21%, 40% {
+        content: "Cook";
+    }
+    41%, 60% {
+        content: "Share";
+    }
+    61%, 80% {
+        content: "Create";
+    }
+    61%, 80% {
+      content: "Discover";
+  }
+  }
+  
+  @keyframes typing{
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+  }
+
+  .hero-container h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .hero-container p {
+    font-size: 16px;
+    color: #4b5563;
+    margin-bottom: 20px;
+  }
+  
+  .browse-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .browse-btn:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-content img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .text-content {
+      order: 2;
+      padding: 20px 0;
+    }
+  
+    .image-content {
+      order: 1;
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  
+    .hero-container h1 {
+      font-size: 28px;
+    }
+  
+    .hero-container p {
+      font-size: 14px;
+    }
+  
+    .browse-btn {
+      font-size: 14px;
+      padding: 10px 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-container h1 {
+      font-size: 24px;
+    }
+  
+    .image-content img {
+      width: 100%;
+    }
+  }
+  

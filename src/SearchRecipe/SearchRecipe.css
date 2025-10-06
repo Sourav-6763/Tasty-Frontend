@@ -1,0 +1,313 @@
+/* Container for the whole search results page */
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+}
+
+/* Form and heading styles */
+.form {
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form .heading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form .message {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Results section where the recipe items are displayed */
+.results {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Each result item (recipe card) */
+.result-item {
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.result-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19),
+    inset 0 0 10px rgba(255, 255, 255, 0.2); /* subtle inner glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* .result-image:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    0 10px 15px rgba(0, 0, 0, 0.25),
+    0 20px 40px rgba(0, 0, 0, 0.2),
+    inset 0 0 12px rgba(255, 255, 255, 0.25);
+} */
+
+.imageDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.result-name {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Button for viewing the recipe */
+button.getRecipe {
+  border-radius: 9px;
+  color: white;
+  padding: 8px 18px;
+  margin-top: 9px;
+  background-color: #1d4ed8;
+  outline: none;
+  border: none;
+  margin-bottom: 33px;
+  cursor: pointer;
+}
+
+button.getRecipe:hover {
+  background-color: #164ab1;
+}
+
+/* Pagination Section */
+.pagination-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+/* Page Item Styles */
+.page-item {
+  padding: 10px 16px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+.page-item:hover {
+  background-color: #f0f0f0;
+}
+
+.page-item.active {
+  background-color: #1d4ed8;
+  color: #fff;
+  font-weight: bold;
+  border-color: #1d4ed8;
+}
+
+/* Dots for ellipses */
+.dots {
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+/* Pagination Arrows */
+.prevbtn,
+.nextbtn {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+.prevbtn:hover,
+.nextbtn:hover {
+  background-color: #64d3c6;
+}
+
+/* Disabled states for prev/next buttons */
+.prevbtn.disabled,
+.nextbtn.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Style for the spinner when loading */
+.spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(5px); /* Blur the background */
+  background-color: rgba(149, 148, 148, 0.3); /* Optional dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99; /* Make sure it’s on top */
+}
+.backgroundblur {
+  position: fixed;
+  top: 90;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./HomePageImage/background.jpeg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(90px);
+  z-index: -2;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2); /* Optional: Dark overlay */
+  z-index: -1;
+}
+
+.noResultFound {
+  text-align: center;
+  margin-top: 60px;
+  color: #555;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.noResultImage {
+  width: 420px;
+  max-width: 90%;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.noResultText {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.skeleton-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.skeletonForSearchFood {
+  width: 200px !important;
+  height: 200px !important;
+  border-radius: 50% !important;
+  margin-top: 21px !important;
+}
+.skeletonForSearchFoodText {
+  width: 80% !important;
+  height: 50px !important;
+}
+.skeletonForSearchFoodButton {
+  width: 120px !important;
+  height: 36px !important;
+  border-radius: 2px !important;
+   margin-bottom: 21px !important;
+}
+.css-18zsr3k > * {
+  margin-top: 0 !important;
+}
+
+/* Responsiveness for small screens */
+@media (max-width: 600px) {
+  .pagination-number {
+    gap: 4px;
+  }
+
+  .page-item {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .prevbtn,
+  .nextbtn {
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+  }
+
+  .result-item {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  
+}
+@media (max-width: 525px) {
+  .result-image {
+    width: 90px;
+    height: 90px;
+  }
+  /* .skeletonForSearchFood {
+  width: 90px !important;
+  height: 90px !important;
+
+} */
+  .result-item {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    height: 300px;
+  }
+  .result-name {
+    font-size: 1rem;
+  }
+  .results {
+    display: grid;
+    grid-template-columns: repeat(2, 4fr);
+    justify-items: center;
+  }
+  .form {
+    padding: 15px;
+  }
+  .searchContainer {
+    padding: 0px;
+  }
+}
+
+

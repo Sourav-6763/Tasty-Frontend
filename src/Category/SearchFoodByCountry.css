@@ -1,0 +1,106 @@
+
+  
+  .CategorySlide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .CategoryName {
+    background-color: transparent; /* Remove the background */
+    color: black; /* Change text color for better visibility */
+    text-align: center;
+    margin-top: 5px; /* Adds spacing between image and text */
+    font-size: 16px;
+    font-weight: bold;
+    height: 90px;
+  }
+  
+  .productContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mySwiperByCountry {
+    width: 100%;
+    margin: 50px auto;
+    overflow: hidden; /* Ensures the images inside don't overflow the rounded corners */
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 180px;
+    height: 250px;
+    object-fit: contain;
+  }
+  
+  .categoryContainerByCountry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+  }
+  .categoryContainer {
+    position: relative;
+  }
+  
+  /* .featuredTextByCountry {
+    position: absolute;
+    left: 20px;
+  } */
+  
+  .leftArrow,
+  .rightArrow {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;  /* Vertically center the arrows */
+    transform: translateY(-50%);  /* Adjust to ensure they are perfectly centered */
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .leftArrow {
+    left: 10px;  /* Left side of the container */
+  }
+  
+  .rightArrow {
+    right: 10px;  /* Right side of the container */
+  }
+  
+  .featuredTextByCountry{
+    margin: 10px 30px;
+    font-family: "Annie Use Your Telescope", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+  }
+  
+  
+  .CategorySlide{
+    margin-right: 0px;
+  }
+  @media (max-width:600px) {
+    .swiper-slide img {
+      width: 100px !important;
+      height: 120px !important;
+    }
+    .featuredTextByCountry h2{
+      font-size: 1.4rem;
+    }
+    
+    
+  }
+  
+  
+  

@@ -1,0 +1,107 @@
+.comment-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  background-color: #f2f2f2;
+}
+
+.comment-form button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.comment-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.comment-list {
+  margin-top: 1rem;
+}
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.comment-avatar img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.comment-body {
+  flex: 1;
+}
+.see-more {
+  color: blue;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.comment-user {
+  color: #333;
+}
+
+.comment-badge {
+  background-color: #2ecc71;
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.comment-time {
+  font-size: 0.75rem;
+  color: #777;
+  margin-left: auto;
+}
+
+.comment-text {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.comment-footer {
+  display: flex;
+  gap: 15px;
+  font-size: 0.9rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.comment-footer span:hover {
+  color: #111;
+}
